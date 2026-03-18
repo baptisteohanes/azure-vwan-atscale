@@ -15,4 +15,5 @@ override.tf.json
 .terraformrc
 terraform.rc
 *.tfplan
+tfplan
 terraform-apply.log
