@@ -7,7 +7,7 @@ variable "prefix" {
 variable "vnets_per_hub" {
   description = "Number of spoke VNets per virtual hub"
   type        = number
-  default     = 450
+  default     = 150
 }
 
 variable "tags" {
