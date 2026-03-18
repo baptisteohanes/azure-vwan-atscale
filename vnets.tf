@@ -9,7 +9,7 @@ resource "azurerm_virtual_network" "spokes" {
   for_each = local.vnet_map
 
   name                = each.value.name
-  resource_group_name = data.azurerm_resource_group.vwan.name
+  resource_group_name = azurerm_resource_group.spokes[each.value.hub_key].name
   location            = each.value.location
   address_space       = [cidrsubnet("10.0.0.0/8", 16, each.value.global_index)]
   tags                = var.tags
